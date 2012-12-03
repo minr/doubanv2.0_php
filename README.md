@@ -35,39 +35,40 @@
 
 获取当前授权用户资料
 
-<?php
+
 	$dou = new DoubanTClientV2($apikey, $apisSecret, $token['access_token']);
 	
 	$info = $dou->get_my_info();
 	
 	print_r($info);
 	
-?>
+
+
 发送一条动态
 
-<?php
+
 	$dou = new DoubanTClientV2($apikey, $apisSecret, $token['access_token']);
 	
 	$info = $dou->update($apikey,"hellow,douban");
 	
 	print_r($info);
 	
-?>
+
+
 发送一条图片动态
 
-<?php
+
 	$dou = new DoubanTClientV2($apikey, $apisSecret, $token['access_token']);
 	
 	$info = $dou->upload($apikey,"hellow,douban","http://img3.douban.com/icon/g76728-1.jpg");
 	
 	print_r($info);
 	
-?>
+
 以上操作，均需要授权
 
 
 具体操作：
-<?php
 
 session_start();
 
@@ -109,6 +110,6 @@ if($_GET['code']){
 	
 }
 
-?>
+
 
 如有问题，欢迎大家补充和完善当前类

@@ -442,7 +442,7 @@ class DoubanTClientV2{
 		if(strtoupper($method) == "GET"){
 			$response = $this->oauth->get("shuo/v2/statuses/{$sid}/reshare");
 		}elseif(strtoupper($method) == "POST"){
-			$response = $this->oauth->post($"shuo/v2/statuses/{$sid}/reshare");
+			$response = $this->oauth->post("shuo/v2/statuses/{$sid}/reshare");
 		}
 		$json = json_decode($response,true);
 		return $json;

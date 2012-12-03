@@ -17,7 +17,7 @@
 	header("Location:".$douban->getAuthorizeURL($callback));
 	//得到授权AccessToken
 	$token = $douban->getAccessToken($callback, $_GET['code']);
-?>
+
 获取当前授权用户资料
 <?php
 	$dou = new DoubanTClientV2($apikey, $apisSecret, $token['access_token']);

@@ -96,7 +96,8 @@ class DoubanOauthV2{
      * @return array||string
      */
     private function oAuthRequest($url, $method, $parameters, $multi = false){
-    	$url = self::$api_uri.$url;
+         if($url!=self::$token_uri)
+	    $url = self::$api_uri.$url;		
     	switch ($method) {
     		case 'GET':
     			$url = $url . '?' . http_build_query($parameters);
